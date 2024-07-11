@@ -1,0 +1,29 @@
+/* src/App.css
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 16px;
+  line-height: 19px;
+  color: #04301a;
+  background-color: #e8eed6;
+  font-family: Arial, Helvetica, sans-serif;
+  direction: ltr;
+  overflow-x: hidden;
+  text-align: left;
+  font-weight: bold; /* Make text bold */
+/* } */ */
+
+
+/* src/App.css */
+
+.App {
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+

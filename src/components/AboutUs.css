@@ -1,0 +1,62 @@
+/* src/components/AboutUs.css */
+
+/* General styles for the About Us section */
+#about-us {
+    text-align: center;
+    padding: 50px 20px;
+    /* background-color: #e8eed6; */
+    background: linear-gradient(to right, #ffc107, #00bcd4, #e91e63, #9c27b0); 
+  }
+  
+  .about-us-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #00693e;
+  }
+  
+  .about-us-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .team-members {
+    margin-top: 50px;
+  }
+  
+  .team-members h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00693e;
+  }
+  
+  .members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .member {
+    text-align: center;
+  }
+  
+  .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .member p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00693e;
+  }
+  

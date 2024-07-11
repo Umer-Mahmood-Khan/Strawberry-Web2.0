@@ -1,0 +1,72 @@
+.model {
+    background-color: #000;
+    padding: 50px 20px;
+    color: #fff;
+  }
+  
+  .upload-container {
+    border: 2px dashed #fff;
+    padding: 50px;
+    text-align: center;
+    margin: 0 auto 20px auto; /* Center the container horizontally */
+    cursor: pointer;
+    width: 70%; /* Adjust this value as needed */
+    max-width: 800px; /* Optional: limit the maximum width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+  
+  .upload-placeholder {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .upload-logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .uploaded-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dropdown {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .dropdown {
+    width: 100%; /* Make dropdown match the width of its parent */
+    max-width: 800px; /* Ensure it does not exceed the max-width of the upload container */
+    margin: 0 auto; /* Center the dropdown horizontally */
+    display: block; /* Make sure the dropdown behaves like a block element */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+  
+  .dropdown button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+  }
+  

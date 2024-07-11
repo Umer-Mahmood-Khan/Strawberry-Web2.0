@@ -1,0 +1,140 @@
+/* src/components/Header.css */
+
+/* Style for the header */
+body:not(.is-hero-header) #header {
+    background: #00693e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 17px 20px 24px;
+    position: fixed; /* Make the navbar fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  /* Add padding to the body to prevent content from being hidden behind the fixed header */
+  body {
+    padding-top: 100px; /* Adjust this value based on the height of your header */
+  }
+  
+  /* Font and body styles */
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 15px;
+    line-height: 19px;
+    color: #04301a;
+    background-color: #e8eed6;
+    font-family: Arial, Helvetica, sans-serif;
+    direction: ltr;
+    overflow-x: hidden;
+    text-align: left;
+    font-weight: bold; /* Make text bold */
+  }
+  
+  /* Style for navigation bar */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; /* Ensure links are bold */
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .nav-icons span, .nav-icons svg {
+    margin-right: 25px;
+    color: white;
+    /* font-weight: bold; Ensure icons are bold */
+  }
+  
+  .search-icon, .menu-icon {
+    font-size: 18px;
+  }
+  
+  .language-icon {
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .language-dropdown {
+    position: relative;
+  }
+  
+  .language-options {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 220px;
+    padding: 0;
+    background: #04301a;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .language-options li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .language-options li:hover {
+    background-color: #035028;
+  }
+  
+  /* Styles for the search bar */
+  .search.active {
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    right: 20px;
+  }
+  
+  .search.active form.search-form {
+    display: flex;
+    align-items: center;
+    width: 317px;
+    padding: 17px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #000000;
+  }
+  
+  .search.active form input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  
+  .search.active form button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  

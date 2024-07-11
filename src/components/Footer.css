@@ -1,0 +1,92 @@
+/* src/components/Footer.css */
+
+.footer {
+    background: #04301a;
+    padding: 54px 25px;
+    flex: 0 0 auto;
+    color: #fff;
+    padding-top: 104px;
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left {
+    text-align: left;
+    margin-left: 100px;
+  }
+  
+  .footer-logo img {
+    width: 150px; /* Adjust this value as needed */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 20px;
+  }
+  .footer-text {
+    font-family: "Gothic";
+    color: #fff;
+    font-size: 44px;
+    margin-bottom: 20px;
+
+  }
+  
+  .footer-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #00693e;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .footer-right {
+    text-align: right;
+    margin-right: 250px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    
+  }
+  .footer-links li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px; /* Add gap of 1px between footer links */
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    
+    color: #fff;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #cad79a;
+    padding-top: 20px;
+    
+  }
+  
+  .footer-bottom-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin-right: 100px;
+  }
+  
+  .footer-bottom-links li {
+    font-size: 14px;
+    color: #fff;
+  }
+  

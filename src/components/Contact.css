@@ -1,0 +1,65 @@
+/* src/components/Contact.css */
+
+#content-blocks.contact {
+    padding-left: 50px; /* Move content slightly to the right */
+}
+
+#content-blocks.contact .h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1, h6.h1 {
+    font-size: 66px;
+    line-height: 84px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+#content-blocks.contact h1, h2, h3, h4 {
+    color: #00693e;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+#content-blocks.contact .img {
+    background-size: cover !important;
+    background-position-x: 50% !important;
+    max-width: 100%;
+    width: 250;
+    height: 250px;
+    margin-bottom: 200px;
+}
+
+#content-blocks.contact .contact-block h6 {
+    display: flex;
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+#content-blocks.contact h5, h6 {
+    color: #00693e;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+
+#content-blocks.contact .contact-block address, #content-blocks.contact .contact-block span, #content-blocks.contact .contact-block p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+    color: #04301a;
+    margin: 0;
+}
+
+#content-blocks.contact .social-icons a {
+    margin-right: 15px; /* Add space between social icons */
+    display: inline-block;
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+}
+
+#content-blocks.contact .social-icons img {
+    width: 70%; /* Ensure the image takes up the full width of the container */
+    height: 70%; /* Ensure the image takes up the full height of the container */
+}
