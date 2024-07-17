@@ -5,6 +5,7 @@ import Banner from './components/Banner';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import Model from './components/Model';
+import SearchPage from './components/SearchPage';
 import Contact from './components/Contact'; 
 import AboutUs from './components/AboutUs';
 
@@ -15,6 +16,7 @@ function App() {
       <Banner />
       <Gallery />
       <Model />
+      <SearchPage />
       <AboutUs/>
       <Contact /> {/* Add the Contact component here */}
       <Footer />

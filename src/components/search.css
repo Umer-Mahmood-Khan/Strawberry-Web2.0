@@ -1,0 +1,114 @@
+.search-page {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; 
+}
+
+.search-container {
+    background-color: #E0F2DD;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Make it responsive to full width */
+    height: 100%; 
+}
+
+.search-content h1 {
+    color: #333;
+}
+
+.form-container {
+    background-color: #E0F2DD;
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.filter-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button, .back-button {
+    background-color: #008253;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.search-button:hover, .back-button:hover {
+    background-color: #006841;
+}
+
+.results-container {
+    background-color: #E0F2DD;
+    padding: 20px;
+}
+
+.result-item {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.no-results-container {
+    text-align: center;
+}
+
+.no-results-text {
+    color: red;
+    font-weight: bold;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.result-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.result-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.no-results-text {
+    color: red;
+    font-weight: bold;
+}
+
+.back-button {
+    margin-bottom: 20px; /* Space below the back button */
+}
