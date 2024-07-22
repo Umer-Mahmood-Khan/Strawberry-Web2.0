@@ -3,6 +3,7 @@ import './Header.css'; // Import the CSS file for Header
 import logo from '../assets/logo.png'; // Import the logo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -21,13 +22,29 @@ const Header = () => {
       <nav>
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
-          
         </div>
         <ul className="nav-links">
-          <li><a href="#why-washington-apples">MODEL</a></li>
-          <li><a href="#varieties">ABOUT US</a></li>
-          <li><a href="#recipes">CONTACT US</a></li>
-          {/* <li><a href="#apple-facts">STRAWBERRY FACTS</a></li> */}
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/search">Search</Link>
+          </li>
+          <li>
+            <Link to="/model">Model</Link>
+          </li>
+          <li>
+            <Link to="/signin">Sign In</Link>
+          </li>
+          <li>
+            <Link to="/signup">Sign Up</Link>
+          </li>
+          <li>
+            <Link to="/aboutus">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
         <div className="nav-icons">
           <FontAwesomeIcon icon={faSearch} className="search-icon" onClick={toggleSearch} />
