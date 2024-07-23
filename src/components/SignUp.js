@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { auth } from '../firebaseConfig';
 import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
-import './SignUp.css'; // Import your CSS file
+import './SignUp.css';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +14,20 @@ const SignUp = () => {
     number: false,
     length: false,
   });
+
+  // Clear the form fields when the component mounts
+  useEffect(() => {
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setError('');
+    setPasswordRequirements({
+      lowercase: false,
+      uppercase: false,
+      number: false,
+      length: false,
+    });
+  }, []);
 
   const validatePassword = (password) => {
     setPasswordRequirements({

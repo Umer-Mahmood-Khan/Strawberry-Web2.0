@@ -138,3 +138,13 @@ body:not(.is-hero-header) #header {
     cursor: pointer;
   }
   
+  /* src/components/Header.css */
+.signout-text {
+  cursor: pointer;
+  color: #ffffff; /* Same color as the links */
+  text-decoration: none;
+}
+
+.signout-text:hover {
+  text-decoration: underline;
+}

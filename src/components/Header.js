@@ -3,11 +3,14 @@ import './Header.css'; // Import the CSS file for Header
 import logo from '../assets/logo.png'; // Import the logo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from '../firebaseConfig'; // Import auth from Firebase
+import { signOut } from 'firebase/auth';
 
-const Header = () => {
+const Header = ({ userEmail, setUserEmail }) => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isLanguageDropdownActive, setIsLanguageDropdownActive] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSearch = () => {
     setIsSearchActive(!isSearchActive);
@@ -15,6 +18,16 @@ const Header = () => {
 
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownActive(!isLanguageDropdownActive);
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      setUserEmail('');
+      navigate('/signin'); // Redirect to Sign In page
+    } catch (error) {
+      console.error("Sign Out Error", error);
+    }
   };
 
   return (
@@ -27,18 +40,30 @@ const Header = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/search">Search</Link>
-          </li>
+          {userEmail && (
+            <>
+              <li>
+                <Link to="/search">Search</Link>
+              </li>
+            </>
+          )}
           <li>
             <Link to="/model">Model</Link>
           </li>
-          <li>
-            <Link to="/signin">Sign In</Link>
-          </li>
-          <li>
-            <Link to="/signup">Sign Up</Link>
-          </li>
+          {!userEmail ? (
+            <>
+              <li>
+                <Link to="/signin">Sign In</Link>
+              </li>
+              <li>
+                <Link to="/signup">Sign Up</Link>
+              </li>
+            </>
+          ) : (
+            <li>
+              <span onClick={handleSignOut} className="signout-text">Sign Out</span>
+            </li>
+          )}
           <li>
             <Link to="/aboutus">About Us</Link>
           </li>
@@ -47,7 +72,9 @@ const Header = () => {
           </li>
         </ul>
         <div className="nav-icons">
-          <FontAwesomeIcon icon={faSearch} className="search-icon" onClick={toggleSearch} />
+          {userEmail && (
+            <FontAwesomeIcon icon={faSearch} className="search-icon" onClick={toggleSearch} />
+          )}
           <div className="language-dropdown">
             <span className="language-icon" onClick={toggleLanguageDropdown}>EN</span>
             {isLanguageDropdownActive && (
@@ -60,7 +87,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} className="menu-icon" />
         </div>
       </nav>
-      {isSearchActive && (
+      {isSearchActive && userEmail && (
         <div className="search active">
           <form className="search-form">
             <input type="text" placeholder="Search" />

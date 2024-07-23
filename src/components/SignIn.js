@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { auth } from '../firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './SignIn.css'; // Import your CSS file
+import { useNavigate } from 'react-router-dom';
+import './SignIn.css';
 
-const SignIn = () => {
+const SignIn = ({ setUserEmail }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setEmail('');
+        setPassword('');
+        setError('');
+        setSuccess('');
+    }, []);
 
     const handleSignIn = async (e) => {
         e.preventDefault();
@@ -20,7 +27,8 @@ const SignIn = () => {
             if (user.emailVerified) {
                 setSuccess('Successfully signed in');
                 setError('');
-                navigate('/'); // Redirect to the Banner page (home page)
+                setUserEmail(user.email); // Set user email in App component
+                navigate('/'); // Redirect to the home page
             } else {
                 setError('Please verify your email address');
                 await auth.signOut(); // Optional: sign out the user if they are not verified

@@ -1,43 +1,47 @@
-/* src/components/Banner.css */
-
 .banner {
-    text-align: center;
-    padding: 10px 20px 50px; /* Adjust the top padding if necessary to prevent overlap */
-    background-color: #e8eed6;
-  }
-  
-  .banner-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .title {
-    font-size: 96px;
-    line-height: 84px;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    font-family: "Egyptienne", serif;
-    color: #00693e;
-    font-weight: bold;
-    margin-bottom: 45px;
-  }
-  
-  .subtitle {
-    font-size: 28px;
-    line-height: 36px;
-    color: #00693e;
-    margin-bottom: 50px;
-    font-weight: normal;
-  }
-  
-  .overview-link {
-    font-size: 18px;
-    color: #00693e;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .overview-link:hover {
-    text-decoration: underline;
-  }
-  
+  text-align: center;
+  padding: 10px 20px 50px; /* Adjust the top padding if necessary to prevent overlap */
+  background-color: #e8eed6;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-message {
+  font-size: 20px; /* Adjust the font size for the welcome message */
+  color: #00693e; /* Green color to match title and subtitle */
+  margin-bottom: 10px; /* Space below the welcome message */
+  font-weight: bold; /* Bold to stand out */
+}
+
+.title {
+  font-size: 96px;
+  line-height: 84px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-family: "Egyptienne", serif;
+  color: #00693e;
+  font-weight: bold;
+  margin-bottom: 20px; /* Reduced margin to keep spacing consistent */
+}
+
+.subtitle {
+  font-size: 28px;
+  line-height: 36px;
+  color: #00693e;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+.overview-link {
+  font-size: 18px;
+  color: #00693e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.overview-link:hover {
+  text-decoration: underline;
+}
