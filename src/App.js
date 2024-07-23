@@ -23,14 +23,18 @@ function App() {
               <Banner />
               <Gallery />
               <Model />
+              <SearchPage />
+              <AboutUs />
+              <Contact />
+              
             </>
           } />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/model" element={<Model />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/model" element={<Model />} />
         </Routes>
         <Footer />
       </div>
